@@ -4,12 +4,10 @@ const { Server } = require("socket.io");
 
 const app = express();
 const server = http.createServer(app);
-
 const io = new Server(server, {
     cors: {
-        origin: ["https://gencgundem.com", "https://www.gencgundem.com"],
-        methods: ["GET", "POST"],
-        credentials: true
+        origin: "*", // Tüm dış bağlantı biçimlerine ve Punycode isteklerine tam izin verir
+        methods: ["GET", "POST"]
     }
 });
 
