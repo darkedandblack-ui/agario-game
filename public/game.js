@@ -1,5 +1,5 @@
-const socket = io();
 
+const socket = io("https://agario-game.onrender.com");
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
